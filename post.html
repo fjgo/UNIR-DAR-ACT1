@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrada del blog</title>
+    <link rel="stylesheet" type="text/css" href="./estilos.css" />
+  </head>
+
+  <body>
+    <div class="cabecera">
+      <h1>Desarrollo de aplicaciones en red</h1>
+      <h2>Blog de la Actividad 1 de la asignatura</h2>
+    </div>
+    <article class="articuloCompleto">
+      <h2 class="descripcionLarga" id="descripcion"></h2>
+      <h3 class="publicacion" id="publicacion"></h3>
+      <div class="entradaLarga">
+        <img
+          class="imagenCompleto"
+          id="imagen"
+          src="imagenes/SinImagen.gif"
+          alt="Imagen de la entrada"
+        />
+        <p class="contenidoCompleto" id="contenido"></p>
+      </div>
+    </article>
+    <div class="navegacion">
+      <a href="#" id="previo" class="botonNavegacion">&laquo; Previo</a>
+      <a href="index.html" class="botonNavegacion seguirEnlace">Volver</a>
+      <a href="#" id="siguiente" class="botonNavegacion">Siguiente &raquo;</a>
+    </div>
+  </body>
+  <script>
+    var params = window.location.search;
+    var entradaBuscada = params.substring(1);
+    fetch("./blog.json")
+      .then((response) => response.json())
+      .then((data) => {
+        var id = data.findIndex((entrada) => entrada.id == entradaBuscada);
+        var previo = document.getElementById("previo");
+        var siguiente = document.getElementById("siguiente");
+        if (id >= 0) {
+          var post = data[id];
+          // Modificamos el contenido de los elementos HTML para mostrar la información del post
+          document.title = post.titulo;
+          var descripcion = document.getElementById("descripcion");
+          descripcion.innerHTML = post.descripcion;
+          var publicacion = document.getElementById("publicacion");
+          publicacion.innerHTML = `Publicado por ${
+            post.usuario.nombre
+          } el ${new Date(post.modificado).toLocaleDateString()}`;
+          if (post.imagen || "" != "") {
+            const imagen = document.getElementById("imagen");
+            imagen.src = post.imagen;
+          }
+          var contenido = document.getElementById("contenido");
+          contenido.innerHTML = post.contenido.replaceAll("\n", "\<br\>");
+        }
+        if (id > 0) {
+          previo.href = `post.html?${data[id - 1].id}`;
+          habilitarSigue(previo);
+        } else {
+          previo.href = `#`;
+          deshabilitarSigue(previo);
+        }
+        if ((id >= 0) & (id < data.length - 1)) {
+          siguiente.href = `post.html?${data[id + 1].id}`;
+          habilitarSigue(siguiente);
+        } else {
+          siguiente.href = `#`;
+          deshabilitarSigue(siguiente);
+        }
+        console.log(post);
+      });
+
+    function deshabilitarSigue(nodo) {
+      nodo.classList.remove("seguirEnlace");
+      nodo.classList.add("sinEnlace");
+    }
+    function habilitarSigue(nodo) {
+      nodo.classList.remove("sinEnlace");
+      nodo.classList.add("seguirEnlace");
+    }
+  </script>
+</html>

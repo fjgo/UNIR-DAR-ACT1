@@ -1,0 +1,137 @@
+/** @format */
+/* Estilos comunes */
+:root {
+  font-family: "Noto Sans";
+  --fondo-base: royalblue;
+  --color-base: white;
+  --fondo-articulo: #fafafa;
+  --borde-articulo: #909090;
+  --titulo-articulo: #505050;
+  --publicacion: #707070;
+  --color-enlaces: #007bff;
+  --fondo-enlaces: #ddd;
+}
+
+.cabecera {
+  background: var(--fondo-base);
+  color: var(--color-base);
+  margin: 10px 0px;
+  padding: 10px;
+  align-content: center;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  background-color: var(--fondo-base);
+  color: var(--color-base);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Estilos de la página principal */
+.articuloResumido {
+  border: 1px solid var(--borde-articulo);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--fondo-articulo);
+  color: black;
+  border-radius: 5px;
+  min-height: 100px;
+}
+
+.tituloResumido {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: var(--titulo-articulo);
+}
+
+.publicacion {
+  margin: 5px 0px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--publicacion);
+}
+
+.entradaResumida {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.contenidoResumido {
+  font-size: 0.9rem;
+  margin: 0px 5px;
+  background: linear-gradient(black, var(--fondo-articulo));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-height: 90px;
+  overflow: hidden;
+}
+
+.imagenResumido {
+  max-height: 90px;
+}
+
+/* Estilos de la página de una entrada */
+.articuloCompleto {
+}
+
+.descripcionLarga {
+  color: var(--titulo-articulo);
+  margin: 0;
+}
+
+.entradaLarga {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagenCompleto {
+  max-height: 20vh;
+  margin: 5px;
+}
+
+.contenidoCompleto {
+  margin: 5px;
+  align-self: flex-start;
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+  border: 1px solid var(--borde-articulo);
+  padding: 10px;
+  background-color: var(--fondo-articulo);
+  border-radius: 5px;
+}
+.botonNavegacion {
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.sinEnlace {
+  background-color: #f1f1f1;
+  color: black;
+  pointer-events: none;
+}
+
+.seguirEnlace {
+  background-color: var(--fondo-base);
+  color: white;
+}
