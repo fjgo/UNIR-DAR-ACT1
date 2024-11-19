@@ -8,7 +8,7 @@
     },
     "titulo": "Lenguaje de marcado HTML 5",
     "descripcion": "Tema 1. Lenguaje de marcado HTML 5",
-    "contenido": "<b>HTML</b> (Hyper Text Markup Language) es un <b>lenguaje de marcado orientado a la maquetación de páginas web</b>. El resultado son documentos <b>.html (estándar)</b> o <b>.htm</b> que pueden ser interpretados por un navegador web. Este lenguaje surge de las reglas estándares SGML (Standard Generalized Markup Language).\nDe aquí se desprenden <b>dos características</b> fundamentales de los lenguajes de marcado:<ul><li>Intención declarativa. Solo se deben centrar en la definición de la estructura de un documento.</li><li>Riguroso para permitir la interacción con otras capas que conforman el desarrollo de sitios web como, por ejemplo, bases de datos.</li></ul>",
+    "contenido": "<p><b>HTML</b></p><p>(Hyper Text Markup Language) es un <b>lenguaje de marcado orientado a la maquetación de páginas web</b>. El resultado son documentos <b>.html (estándar)</b> o <b>.htm</b> que pueden ser interpretados por un navegador web. Este lenguaje surge de las reglas estándares SGML (Standard Generalized Markup Language).</p><p>De aquí se desprenden <b>dos características</b> fundamentales de los lenguajes de marcado:</p><ul><li><p>Intención declarativa. Solo se deben centrar en la definición de la estructura de un documento.</p></li><li>Riguroso para permitir la interacción con otras capas que conforman el desarrollo de sitios web como, por ejemplo, bases de datos.<p></p></li></ul><p></p></span>",
     "imagen": "./imagenes/imagen_1.jpg",
     "modificado": "2024-10-21"
   },
@@ -21,7 +21,7 @@
     },
     "titulo": "Introducción a hojas de estilo CSS ",
     "descripcion": "Tema 2. Introducción a hojas de estilo CSS",
-    "contenido": "En la creación de páginas web, el lenguaje HTML únicamente se encarga de estructurar el contenido. Cuando a ese contenido es necesario <b>cambiarle la apariencia visual</b> se utilizan <b>hojas de estilos en cascada o CSS</b> (Cascade Style Sheets).\nEl objetivo principal de las hojas de estilo es lograr una separación total entre el contenido y la estructura de su estilo de presentación. Sin embargo, el lenguaje HTML permite la <b>inclusión de estilos en la propia creación del documento</b> HTML (aunque no se trata de una buena práctica según el W3C).",
+    "contenido": "<p>En la creación de páginas web, el lenguaje HTML únicamente se encarga de estructurar el contenido. Cuando a ese contenido es necesario <b>cambiarle la apariencia visual</b> se utilizan <b>hojas de estilos en cascada o CSS</b> (Cascade Style Sheets).</p><p>El objetivo principal de las hojas de estilo es lograr una separación total entre el contenido y la estructura de su estilo de presentación. Sin embargo, el lenguaje HTML permite la <b>inclusión de estilos en la propia creación del documento</b> HTML (aunque no se trata de una buena práctica según el W3C).</p>",
     "imagen": "./imagenes/imagen_2.jpg",
     "modificado": "2024-10-28"
   },
@@ -34,7 +34,7 @@
     },
     "titulo": "Lenguaje script de navegador: JavaScript",
     "descripcion": "JavaScript",
-    "contenido": "JavaScript <b>es un lenguaje utilizado en el desarrollo de aplicaciones web con la idea de aumentar la interacción con el usuario e introducir ciertos efectos</b> (dinamismo) en la web. Se trata de un lenguaje para poder <b>realizar scripts</b>.\nPara poder introducir código JavaScript en una web existen diferentes alternativas:\n<ul><li><b>Embebido en el código HTML</b>. En este caso el código del script debe encerrarse entre etiquetas HTML &lt;script&gt;.</li><li><b>Utilizando un archivo externo</b>. Esta alternativa se apoya en un archivo de texto plano que se incluye en la cabera del documento web.</li><li><b>En los elementos HTML</b>. Normalmente se utiliza para realizar llamadas a funciones JavaScript, por ejemplo, para el control de campos de formularios.",
+    "contenido": "<p>JavaScript <b>es un lenguaje utilizado en el desarrollo de aplicaciones web con la idea de aumentar la interacción con el usuario e introducir ciertos efectos</b> (dinamismo) en la web. Se trata de un lenguaje para poder <b>realizar scripts</b>.</p><p>Para poder introducir código JavaScript en una web existen diferentes alternativas:</p><ul><li><p><b>Embebido en el código HTML.</b> En este caso el código del script debe encerrarse entre etiquetas HTML &lt;script&gt;.</p></li><li><p><b>Utilizando un archivo externo</b>. Esta alternativa se apoya en un archivo de texto plano que se incluye en la cabera del documento web.</p></li><li><p><b>En los elementos HTML</b>. Normalmente se utiliza para realizar llamadas a funciones JavaScript, por ejemplo, para el control de campos de formularios.</p>",
     "imagen": "./imagenes/imagen_3.jpg",
     "modificado": "2024-11-04"
   },
@@ -47,7 +47,7 @@
     },
     "titulo": "Actividad 1",
     "descripcion": "Actividad 1. Creación de un blog",
-    "contenido": "<b>Objetivos</b>\n\nEl objetivo principal de esta actividad es poner en práctica los conceptos básicos relacionados con la programación (HTML+CSS). De esta forma, el alumno será capaz de crear él mismo un sitio web sencillo, en este caso, un blog, donde los conocimientos aplicados podrán ser extrapolados a cualquier sitio web que se quiera crear desde cero.\n\n\n<b>Descripción de la actividad</b>\n\nEl blog por crear deberá contener un mínimo de 3 entradas sencillas (texto + imágenes). Para poder realizar la actividad, se recomienda utilizar una plataforma de generación de sitios estáticos (como Gatsby, Jekyll u otro).",
+    "contenido": "<p><b>Objetivos</b></p><p>El objetivo principal de esta actividad es poner en práctica los conceptos básicos relacionados con la programación (HTML+CSS). De esta forma, el alumno será capaz de crear él mismo un sitio web sencillo, en este caso, un blog, donde los conocimientos aplicados podrán ser extrapolados a cualquier sitio web que se quiera crear desde cero.</p><p><b>Descripción de la actividad</b></p><p>El blog por crear deberá contener un mínimo de 3 entradas sencillas (texto + imágenes). Para poder realizar la actividad, se recomienda utilizar una plataforma de generación de sitios estáticos (como Gatsby, Jekyll u otro).</p>",
     "modificado": "2024-11-25"
   }
 ]

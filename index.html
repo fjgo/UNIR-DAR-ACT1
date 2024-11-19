@@ -1,64 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./estilos.css" />
-    <title>Actividad 1 - DAR</title>
-  </head>
 
-  <body>
-    <div class="cabecera">
-      <h1>Desarrollo de aplicaciones en red</h1>
-      <h2>Blog de la Actividad 1 de la asignatura</h2>
-    </div>
-    <p>
-      Este blog ha sido creado con HTML, CSS y JavaScript para mostrar los
-      ejercicios y actividades de la actividad 1 de la asignatura
-      <b>Desarrollo de aplicaciones en red</b>.
-    </p>
-    <section id="articulos">
-      <article id="plantilla" hidden class="articuloResumido tooltip">
-        <span class="tooltiptext">Haz click para ver la entrada</span>
-        <h2 class="tituloResumido" id="titulo"></h2>
-        <h3 class="publicacion" id="publicacion"></h3>
-        <div class="entradaResumida">
-          <img
-            class="imagenResumido"
-            id="imagen"
-            src="imagenes/SinImagen.gif"
-            alt="Imagen de la entrada"
-          />
-          <p class="contenidoResumido" id="contenido"></p>
-        </div>
-      </article>
-    </section>
-  </body>
-  <script>
-    fetch("./blog.json")
-      .then((response) => response.json())
-      .then((data) => {
-        data.forEach((post) => {
-          const articulos = document.getElementById("articulos");
-          const articulo = document.getElementById("plantilla").cloneNode(true);
-          articulo.id = "post_" + post.id;
-          const titulo = articulo.querySelector("#titulo");
-          titulo.innerHTML = post.titulo;
-          var enlace = `post.html?${post.id}`;
-          articulo.onclick = () => (window.location = enlace);
-          const publicacion = articulo.querySelector("#publicacion");
-          publicacion.innerHTML = `Publicado por ${
-            post.usuario.nombre
-          } el ${new Date(post.modificado).toLocaleDateString()}`;
-          if (post.imagen || "" != "") {
-            const imagen = articulo.querySelector("#imagen");
-            imagen.src = post.imagen;
-          }
-          const contenido = articulo.querySelector("#contenido");
-          contenido.innerHTML = post.contenido.replaceAll("\n", "\<br\>");
-          articulos.appendChild(articulo);
-          articulo.hidden = false;
-        });
-      });
-  </script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/estilos.css" />
+  <script src="scripts/scripts.js"></script>
+  <title>Actividad 1 - DAR</title>
+</head>
+
+<body>
+  <div class="cabecera">
+    <h1>Desarrollo de aplicaciones en red</h1>
+    <h2>Blog de la Actividad 1 de la asignatura</h2>
+  </div>
+  <p>
+    Este blog ha sido creado con HTML, CSS y JavaScript para mostrar los
+    ejercicios y actividades de la actividad 1 de la asignatura
+    <b>Desarrollo de aplicaciones en red</b>.
+  </p>
+  <section id="articulos">
+    <article id="plantilla" hidden class="articuloResumido tooltip">
+      <span class="tooltiptext">Haz click para ver la entrada</span>
+      <h2 class="tituloResumido" id="titulo"></h2>
+      <h3 class="publicacion" id="publicacion"></h3>
+      <div class="entradaResumida">
+        <img class="imagenResumido" id="imagen" src="imagenes/SinImagen.gif" alt="Imagen de la entrada" />
+        <div class="contenidoResumido" id="contenido"></div>
+      </div>
+    </article>
+  </section>
+</body>
+<script>
+  window.onload = index;
+</script>
+
 </html>
